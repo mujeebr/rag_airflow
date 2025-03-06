@@ -1,0 +1,9 @@
+apache-airflow
+streamlit
+langchain
+sentence-transformers
+pypdf
+faiss-cpu
+openai
+langchain-community
+tiktoken
