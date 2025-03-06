@@ -67,12 +67,14 @@ log_task = PythonOperator(
 # Task 3: Send email on failure (runs only if `update_faiss` fails)
 email_task = EmailOperator(
     task_id="send_failure_email",
-    to="your_email@example.com",
+    to="mujeebr469@gmail.com",
     subject="Airflow DAG Failure: update_faiss_index",
     html_content="The FAISS update task has failed. Please check Airflow logs for details.",
     trigger_rule="one_failed",  # This runs only if at least one upstream task fails
     dag=dag,
 )
+
+
 
 # Define task dependencies
 update_task >> log_task  # log_task runs after update_task
